@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import PlacesList from "../compomemts/PlacesList";
 
+
 const DUMMY_PLACES = [
     {
         id: 'p1',
@@ -44,7 +45,7 @@ const DUMMY_PLACES = [
 const UserPlaces = () => {
     const userId = useParams().userId;
     const loadedPlaces = DUMMY_PLACES.filter(place => place.creator === userId);
-    return <PlacesList item={loadedPlaces}/>
+    return <PlacesList item={loadedPlaces} />
 
 }
 
